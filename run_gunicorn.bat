@@ -1,0 +1,1 @@
+D:\BegimaiSydykova\projects\pet_projects\NeoTour\venv\Scripts\activate && gunicorn -w 3 -b 0.0.0.0:8000 neo_tour.wsgi:applicationpython manage.py runserver 0.0.0.0:8000
