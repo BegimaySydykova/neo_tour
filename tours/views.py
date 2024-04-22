@@ -57,6 +57,8 @@ class TourDetailApiView(RetrieveAPIView):
         return Response(data)
     
 class TourReviewCreateApiView(CreateAPIView):
+    serializer_class = TourReviewSerializer
+    
     def create(self, request):
         serializer = TourReviewSerializer(data=request.data)
         if serializer.is_valid():

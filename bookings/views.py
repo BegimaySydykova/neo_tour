@@ -18,6 +18,7 @@ class TourBookingDetailApiView(RetrieveAPIView):
 
 class TourBookingCreateApiView(CreateAPIView):
     queryset = TourBooking.objects.all()
+    serializer_class = TourBookingSerializer
 
     def create(self, request):
         serializer = TourBookingSerializer(data=request.data)
